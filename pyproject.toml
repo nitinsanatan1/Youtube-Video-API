@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "youtube-videos-api"
+version = "0.1.0"
+description = ""
+authors = ["Nitin Sanatan"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+Flask = "^2.0.1"
+requests = "^2.25.1"
+elasticsearch = "^7.13.1"
+marshmallow = "^3.12.1"
+python-dotenv = "^0.17.1"
+gunicorn = "^20.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
