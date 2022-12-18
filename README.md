@@ -1,9 +1,8 @@
 # Youtube-Video-API
 ## Steps to build this project
 1. Clone this repository.
-2. Add the `.env` file in the root path.
-3. Run `docker-compose up -d --build` to build and launch project on docker.
-4. After the project startup, one can access flask_app at `localhost:5001` 
+3. Add the `.env` file in the root path.
+2. Run `docker-compose up -d --build` to build and launch project on docker.
 
 
 ## Tools used
