@@ -1,7 +1,7 @@
 # Youtube-Video-API
 ## Steps to build this project
 1. Clone this repository.
-3. Add the `.env` file in the root path.
+3. Add the `.env` file inside `app` folder path.
 2. Run `docker-compose up -d --build` to build and launch project on docker.
 
 
