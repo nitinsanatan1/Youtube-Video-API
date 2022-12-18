@@ -3,6 +3,7 @@
 1. Clone this repository.
 3. Add the `.env` file in the root path.
 2. Run `docker-compose up -d --build` to build and launch project on docker.
+3. After launch, one can access flask app at `localhost:5001`
 
 
 ## Tools used
