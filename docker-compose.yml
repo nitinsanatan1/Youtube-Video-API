@@ -1,0 +1,40 @@
+version: '3'
+
+services:  
+  redis:
+    image: redis:latest
+    hostname: redis
+    ports:
+      - "6379:6379"
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    hostname: web
+    command: >
+      sh -c "cd app && 
+             flask run"
+    volumes:
+      - .:/app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - redis  
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: >
+      sh -c "cd app &&
+             celery -A app.celery worker -B"
+    environment:
+      CELERY_BROKER_URL: redis://redis
+      CELERY_RESULT_BACKEND: redis://redis
+    volumes:
+      - .:/app
+    links:
+      - redis
+    depends_on:
+      - redis    
