@@ -1,14 +1,14 @@
 # Youtube-Video-API
 ## Steps to build this project
 1. Clone this repository.
-3. Add the `.env` file in the root path.
+3. Add the `.env` file inside app folder.
 2. Run `docker-compose up -d --build` to build and launch project on docker.
 3. After launch, one can access flask app at `localhost:5001`
 
 
 ## Tools used
 1. Flask: Python based lightweight web-framework.
-2. Redis: An in-memory data store & message broker. Used as a message broker and to store tasks.
+2. Redis: An in-memory data store & message broker. Used as a message broker and to queue the tasks.
 3. Celery: Used to run and handle background tasks & schedule APIs too.
 4. ElasticSearch: A lucene based, document search engine. Used as a db for fast retrival of data. 
 5. Poetry: Dependency management and packaging tool.
